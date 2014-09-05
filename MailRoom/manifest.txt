@@ -1,0 +1,7 @@
+
+Name                 "Mailroom Mod"  
+Author               cahaseler  
+Description          "Adds prisoner incoming mail and packages, a facility to monitor them, and associated needs boosts for getting mail. Planned features include mail delivery like laundry, contraband smuggling, and intelligence from prisoner mail."  
+IsTranslation        false  
+FileID               MailRoom  
+UpdateTime           1409311200

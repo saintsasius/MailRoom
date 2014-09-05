@@ -1,0 +1,12 @@
+
+BEGIN Research   
+    Name                 PrisonMail
+    Type                 Ability  
+    Requires             Security
+    Admin                Security  
+    Cost                 -1500  
+    Time                 360  
+    X                    1000  
+    Y                    50 
+END
+

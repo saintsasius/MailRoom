@@ -1,0 +1,71 @@
+BEGIN Provider
+	Action	        readmail
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			0
+	PrimaryNeed	    Family
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Freedom
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END
+
+BEGIN Provider
+	Action	        readmail
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			1
+	PrimaryNeed	    Family
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Freedom
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END
+
+BEGIN Provider
+	Action	        readmail
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			2
+	PrimaryNeed	    Family
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Freedom
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END
+
+BEGIN Provider
+	Action	        openpackage
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			0
+	PrimaryNeed	    Freedom
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Family
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END
+
+BEGIN Provider
+	Action	        openpackage
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			1
+	PrimaryNeed	    Freedom
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Family
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END
+
+BEGIN Provider
+	Action	        openpackage
+	ProviderType	Object
+	Object	        MailBoxes
+	Slot			2
+	PrimaryNeed	    Freedom
+	PrimaryRate	    -2.00000
+	SecondaryNeed		Family
+	SecondaryRate		-4.00000
+	ActionType	    Use
+END

@@ -1,0 +1,24 @@
+
+
+object_IncomingMail            		Unsorted Mail
+object_IncomingPackage              Unsorted Package
+object_OutgoingMail                 Outgoing Mail
+object_OutgoingPackage              Outgoing Package
+object_IncomingMailProcessed    	Mail
+object_IncomingPackageProcessed     Package
+object_OutgoingMailProcessed		Stamped Mail
+object_OutgoingPackageProcessed		Stamped Packages
+object_MailBin                      Mail Bin
+object_ReadingTable                 Mail Review Desk
+object_XRayMachine					X-Ray Scanning Machine
+object_MailBoxes					Prisoner Mail Boxes
+object_PackageBoxes					Prisoner Package Boxes
+object_MailBox						Mail Delivery Box
+
+room_MailRoom		                Mail Room
+
+research_PrisonMail                 Mail System
+researchtooltip_PrisonMail          Allows you to receive and screen mail to prisoners, and lets prisoners send mail. This can help with the need for Family and Freedom.
+
+action_readmail						Reading Mail
+action_openpackage					Open Package

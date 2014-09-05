@@ -1,0 +1,116 @@
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             IncomingMail  
+    Container            ReadingTable
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             OutgoingMail
+    Container            ReadingTable
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             OutgoingPackage
+    Container            ReadingTable
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             IncomingPackage
+    Container            XRayMachine
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             IncomingPackageProcessed
+    Container            PackageBoxes
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             IncomingMailProcessed
+    Container            MailBoxes
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             OutgoingMailProcessed
+    Room				 Exports
+    Distribution         Random
+END
+
+BEGIN ProductionRule       
+    Rule                 Storage
+    Material             OutgoingPackageProcessed
+    Room	             Exports
+    Distribution         Random
+END
+
+BEGIN Processor
+    Processor           ReadingTable
+    Input               IncomingMail
+    Output              IncomingMailProcessed
+    OperatingTime       10.0
+    Properties          ShowDuringOperation
+    Object              ReadingTable
+    Worker              Guard
+END
+
+BEGIN Processor
+    Processor           ReadingTable
+    Input               OutgoingMail
+    Output              OutgoingMailProcessed
+    OperatingTime       15.0
+    Properties          ShowDuringOperation
+    Object              ReadingTable
+    Worker              Guard
+END
+
+BEGIN Processor
+    Processor           ReadingTable
+    Input               OutgoingPackage
+    Output              OutgoingPackageProcessed
+    OperatingTime       17.0
+    Properties          ShowDuringOperation
+    Object              ReadingTable
+    Worker              Guard
+END
+
+BEGIN Processor
+    Processor           XRayMachine
+    Input               IncomingPackage
+    Output              IncomingPackageProcessed
+    OperatingTime       13.0
+	Properties          ShowDuringOperation
+	Object              XRayMachine
+    Worker              Guard
+END
+
+BEGIN Processor
+    Processor            MailBoxes
+    Input                IncomingMailProcessed
+    Output               OutgoingMail
+    OperatingTime        5.0
+	Object				 MailBoxes
+	Properties           ShowDuringOperation
+	Worker				 Guard
+END
+
+BEGIN Processor
+    Processor            PackageBoxes
+    Input                IncomingPackageProcessed
+    Output               OutgoingPackage
+    OperatingTime        5.0
+	Object				 PackageBoxes
+	Properties           ShowDuringOperation
+	Worker				 Guard
+END
+

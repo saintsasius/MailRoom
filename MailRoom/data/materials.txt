@@ -1,0 +1,384 @@
+
+BEGIN Object     
+    Name                 IncomingMail
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         20
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 2 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 IncomingPackage
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         20
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 0 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 OutgoingMail
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         20
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 2 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 OutgoingPackage
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         20
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 0 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 IncomingMailProcessed
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         50
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 2 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 IncomingPackageProcessed
+    Width                1  
+    Height               1
+    Toughness            1.0000  
+    MaxStackSize         50
+    RenderDepth          1  
+    Properties           Material
+    BEGIN   Sprite
+        x 0 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+END
+
+BEGIN Object     
+    Name                 OutgoingMailProcessed
+    MaxStackSize         20
+    Properties           Material
+	Properties           Sellable
+	Price                5
+END
+
+BEGIN Object     
+    Name                 OutgoingPackageProcessed
+    MaxStackSize         20
+    Properties           Material
+	Properties           Sellable
+	Price                10
+END
+
+BEGIN Object     
+    Name                 MailBin
+    Width                1  
+    Height               1
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -20
+    NumSlots 1
+	Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               Composite
+    Properties           StaticObject
+    Properties           RoomSpecific
+    WorkGroup            MailRoom
+	Research             PrisonMail
+    BEGIN   Sprite
+        x 4 
+        y 0  
+        w 2  
+        h 2  
+        RotateType 0
+    END
+	
+END
+
+BEGIN Object     
+    Name                 MailBox
+    Width                1  
+    Height               1
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -10
+    NumSlots 1
+	Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               Composite
+    Properties           StaticObject
+    Properties           RoomSpecific
+	Properties			 Scripted
+    WorkGroup            MailRoom
+	Research             PrisonMail
+    BEGIN   Sprite
+        x 6 
+        y 2  
+        w 2  
+        h 3  
+        RotateType 0
+    END
+	
+END
+
+BEGIN Object     
+    Name                 MailBoxes
+    Width                3
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -300
+    NumSlots 			 3
+	Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               Wood
+    Properties           StaticObject
+	Properties           Processor
+	Properties			 RoomSpecific
+	Research             PrisonMail
+	WorkGroup			 MailRoom
+	BEGIN   Sprite
+        x 6 
+        y 5  
+        w 4  
+        h 3  
+        RotateType 4
+		BEGIN Marker
+			x             1.0
+			y             2.2
+			orientation.x 0.0
+			orientation.y 0.0
+			Index         0
+		END
+		BEGIN Marker
+			x             2.5
+			y             1.5
+			Index         1
+        END
+		 BEGIN Marker
+            x             3.9
+            y             2.2
+            Index         2
+        END
+	END
+	
+END
+
+BEGIN Object     
+    Name                 PackageBoxes
+    Width                3
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -300
+    NumSlots 			 3
+	Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               Wood
+    Properties           StaticObject
+	Properties           Processor
+	Properties			 RoomSpecific
+	Research             PrisonMail
+	WorkGroup			 MailRoom
+	BEGIN   Sprite
+        x 6 
+        y 5  
+        w 4  
+        h 3  
+        RotateType 4
+		BEGIN Marker
+			x             1.0
+			y             2.2
+			orientation.x 0.0
+			orientation.y 0.0
+			Index         0
+		END
+		BEGIN Marker
+			x             2.5
+			y             1.5
+			Index         1
+        END
+		 BEGIN Marker
+            x             3.9
+            y             2.2
+            Index         2
+        END
+	END
+	
+END
+
+BEGIN Object     
+    Name                 ReadingTable  
+    Width                3  
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -100  
+    NumSlots             3 
+    Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               Composite
+    Properties           StaticObject
+    Properties           Processor
+    Properties           RoomSpecific
+	Research             PrisonMail
+	WorkGroup			 MailRoom
+    BEGIN   Sprite
+        x 0 
+        y 5  
+        w 6  
+        h 3  
+        RotateType 4
+        BEGIN Marker
+           x             1.5
+           y             1.0
+           orientation.x 0.0
+           orientation.y 0.0
+           Index         0
+        END
+        BEGIN Marker
+           x             3.1
+           y             1.0
+           Index         1
+        END
+        BEGIN Marker
+           x             4.7
+           y             1.0
+           Index         2
+        END
+    END
+END
+
+BEGIN Object     
+    Name                 XRayMachine  
+    Width                3  
+    ConstructionTime     3.00000  
+    MoveSpeedFactor      0.250000  
+    Toughness            10.0000  
+    Price                -1500  
+    NumSlots             3 
+    Group                StaticObject  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+    MadeOf               SolidMetal
+    Properties           StaticObject
+    Properties           Processor
+    Properties           RoomSpecific
+	Research             PrisonMail
+	WorkGroup			 MailRoom
+    BEGIN   Sprite
+        x 0 
+        y 2  
+        w 6  
+        h 3  
+        RotateType 4
+        BEGIN Marker
+           x             0.5
+           y             1.5
+           orientation.x 0.0
+           orientation.y 0.0
+           Index         0
+        END
+        BEGIN Marker
+           x             1.0
+           y             1.0
+           Index         1
+        END
+        BEGIN Marker
+           x             1.0
+           y             1.0
+           Index         2
+        END
+    END
+END
+
+BEGIN Room
+    Name                MailRoom
+    Research            PrisonMail
+    BEGIN Requirement Type Enclosed END
+    BEGIN Requirement Type Object  Id ReadingTable END
+	BEGIN Requirement Type Object  Id MailBin END
+    BEGIN Requirement Type MinimumSize  x 5  y 5  END
+    BEGIN Requirement Type Indoor END
+	BEGIN LikelyObject Id XRayMachine END
+	BEGIN LikelyObject Id StaffDoor END
+	BEGIN LikelyObject Id Bin END
+    BEGIN Contraband  Id    Drugs  END
+END
+
+BEGIN Room       
+    Name                 CommonRoom  
+    BEGIN Requirement Type Indoor  END
+    BEGIN LikelyObject	Id		Bench			END
+    BEGIN LikelyObject	Id		PoolTable		END
+    BEGIN LikelyObject	Id		TvLarge			END
+    BEGIN LikelyObject	Id		TvSmall			END
+	BEGIN LikelyObject 	Id		MailBoxes		END
+END
+
+BEGIN Room
+	Name 				Deliveries
+	BEGIN LikelyObject Id		MailBox			END
+END
+
+
